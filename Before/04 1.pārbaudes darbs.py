@@ -116,3 +116,34 @@ if skaitlis % 2 == 0:
 else:
     print("Nepāra skaitlis.")
 
+
+# P.UZDEVUMS. Matemātiskais tulks
+#       Python jau atbalsta matemātiku, tādējādi varat rakstīt kodu, lai pievienotu, atņemtu, reizinātu vai dalītu vērtības un pat mainīgos. Bet uzrakstīsim programmu, kas lietotājiem ļauj aprēķināt izteiksmes, pat nezinot Python.
+#       Uzrakstīt programmu, kas pieprasa lietotājam aritmētisko izteiksmi un pēc tam aprēķina un izvada rezultātu ar peldošā komatu, kas formatēta līdz vienai zīmei aiz komata. Pieņemsim, ka lietotāja ievade tiks formatēta kā    x y z    ar vienu atstarpi starp x un y un vienu atstarpi starp y un B, kur:
+# x ir vesels skaitlis
+# y ir + vai - vai * vai /
+# z ir vesels skaitlis
+# Piemēram, ja lietotājs ievada
+# 1 + 1, jūsu programmai vajadzētu izvadīt 2.0
+# 2 – 3, , jūsu programmai vajadzētu izvadīt -1.0
+# 50 / 5, jūsu programmai vajadzētu izvadīt 10.0
+
+
+expression = input("Expression: ").strip(" ")
+
+value = expression.split(' ')
+
+x = int(value[0])
+y = value[1]
+z = int(value[2])
+
+if y == "+":
+    result = x + z
+elif y == "-":
+    result = x - z
+elif y == "*":
+    result = x * z
+else:
+    result = x / z
+
+print(f'{result:.1f}')
