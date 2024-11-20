@@ -93,12 +93,6 @@
 #         print(num, end=" ")
 
 
-def saskaitit_skaitlus(skaitlis):
-    # Saskaitām ciparus skaitlī, līdz iegūstam viencipara skaitli (vai meistarskaitli)
-    while skaitlis > 9:
-        skaitlis = sum(int(cipars) for cipars in str(skaitlis))
-    return skaitlis
-
 # Lietotāja dzimšanas datuma ievade
 print("Ievadiet savu dzimšanas datumu:")
 gads = int(input("Gads (piem., 1987): "))
@@ -108,8 +102,10 @@ datums = int(input("Datums (1-31): "))
 # Saskaitām dzimšanas datuma ciparus
 dzimsanas_summa = sum(int(cipars) for cipars in f"{gads}{menesis:02}{datums:02}")
 
-# Aprēķinām dzīves ceļa skaitli
-dzives_cela_skaitlis = saskaitit_skaitlus(dzimsanas_summa)
+# Samazinām līdz viencipara skaitlim vai meistarskaitlim
+while dzimsanas_summa > 9 and dzimsanas_summa not in {11, 22, 33}:
+    dzimsanas_summa = sum(int(cipars) for cipars in str(dzimsanas_summa))
 
 # Rezultāta izvadīšana
-print(f"Jūsu dzīves ceļa skaitlis ir: {dzives_cela_skaitlis}")
+print(f"Jūsu dzīves ceļa skaitlis ir: {dzimsanas_summa}")
+
