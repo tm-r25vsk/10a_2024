@@ -237,6 +237,20 @@ for i in range(augstums):
         print("H", end="")
     print()  # Pāriet uz jaunu rindu pēc katras rindas !!!
 
+# Kā tas darbojas:
+# Ievade:
+
+# Lietotājs ievada platumu un augstumu kā veselus skaitļus.
+# Ārējais for cikls:
+
+# Pārstāv katru taisnstūra rindu (kopā augstums rindas).
+# Iekšējais for cikls:
+
+# Pārstāv simbolus katrā rindā (kopā platums simboli).
+# Izmanto end="", lai saglabātu simbolus vienā rindā.
+# print():
+
+# Pēc katras rindas izdrukāšanas pāriet uz nākamo rindu.
 
 
 print(f"""
