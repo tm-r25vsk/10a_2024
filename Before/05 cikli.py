@@ -153,4 +153,95 @@ print(students)
 for student in students:
     print(student)
     
+
+for a in "skola":
+    print(a)  # izdrukā visus simbolus vārdā
+
+
 # https://video.cs50.io/-7xg8pGcP6w?start=2443
+
+# len
+
+# izmanto, ja vēlas drukāt ne tikai studenta vārdu, bet arī vietu sarakstā (i+1 jo sākas skaitīšana no 0):
+
+for i in range(len(students)):
+    print(i + 1, students[i])
+    
+
+# dict ir kā 2-dimensiju mainīgais saraksts
+
+# varam izvēlēties 2 sarakstus, bet tas ātri kļūs nepārskatāms:
+
+skolotajs = ["Gustava", "Ungure", "Deksne", "Gladčenko"]
+macibu_prieksmets = ["matemātika", "matemātika", "matemātika", "fizika"]
+
+skolotajs = {
+    "Gustava": "matemātika",
+    "Ungure": "matemātika",
+    "Deksne": "matemātika",
+    "Gladčenko": "matemātika"
+}
+
+# lai izdrukātu priekšmetu, nav jāizmanto indekss, bet atslēga
+print(skolotajs["Ungure"])
+print(skolotajs["Deksne"])
+
+for skol in skolotajs:
+    print(skol)   # izdrukāsies tikai atslēgas
+    
+for skol in skolotajs:
+    print(skol, skolotajs[skol])   # izdrukāsies ar mācību priekšmetu
+    
+for skol in skolotajs:
+    print(skol, skolotajs[skol], sep=" māca " )   # izdrukāsies ar mācību priekšmetu un atdalītāju
+    
+# ja jāsaista vairākas lietas ar atslēgu: 
+# --------------------------------------------------------
+#  Gustava	    |  Ungure	 |   Deksne    | Gladčenko
+# --------------------------------------------------------
+# matemātika	| matemātika |	matemātika	|  fizika
+# --------------------------------------------------------
+#    27.	    |    205.	 |              |    206.
+# --------------------------------------------------------
+ 
+# jāveido saraksts ar tajā iekļautajām vārdnīcām
+
+skolotajs = [
+    {"uzvards": "Gustava", "priekšmets": "matemātika", "kabinets": "27."},
+    {"uzvards": "Ungure", "priekšmets": "matemātika", "kabinets": "205."},
+    {"uzvards": "Deksne", "priekšmets": "matemātika", "kabinets": None},   # ja nav datu - None
+    {"uzvards": "Glandčenko", "priekšmets": "fizika", "kabinets": "206."},
+]
+
+for skol in skolotajs:
+    print(skol["uzvards"]) # ja nepieciešmi tikai uzvārdi
+    
+# lai izdrukātu visus vajadzīgos datus
+
+for skol in skolotajs:
+    print(skol["uzvards"], skol["priekšmets"], skol["kabinets"], sep=", ")
+
+
+# cikls ciklā
+
+# taisnstūra zīmēšana noteiktos izmēros
+
+# Pajautā lietotājam taisnstūra izmērus
+platums = int(input("Ievadiet taisnstūra platumu: "))
+augstums = int(input("Ievadiet taisnstūra augstumu: "))
+
+# Zīmē taisnstūri
+print("Taisnstūris:")
+for i in range(augstums):
+    for j in range(platums):
+        print("H", end="")
+    print()  # Pāriet uz jaunu rindu pēc katras rindas !!!
+
+
+
+print(f"""
+      fcdnwsefjnwse
+      eewfwefwef fdeveve
+            dfvbvbdfdfbvdf
+        vdvvdfvdf
+        """)
