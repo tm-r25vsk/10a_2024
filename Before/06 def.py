@@ -58,3 +58,22 @@ def kvadrats(n):
 
 
 main()
+
+
+
+# Funkcija var atgriezt vienu vai vairākas vērtības – bet ja neatgriež neko, tad atgriež speciālo
+# vērtību None. Atgriežot vairākas vērtības, tās return operatora izsaukumā jāatdala ar
+# komatiem
+# def intdivide(a,b):
+#  return a // b, a % b # gan dalījums, gan atlikums
+# d,r = intdivide(13,5)
+# print(d,r)
+
+# Create a def function with No Arguments
+# Create def function to find the subtraction of two Numbers
+# Create def function with the first 10 prime numbers
+# Create a function to find the factorial of a Number
+# Python def keyword example with *args
+# Python def keyword example with **kwargs
+# Passing Function as an Argument
+# Python def keyword example with the class
