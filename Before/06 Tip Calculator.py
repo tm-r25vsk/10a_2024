@@ -29,7 +29,7 @@ def main():
     nauda, valutas_nosaukums = nauda_to_float(input("Cik jāmaksā par pasūtījumu? "))
     procenti = procenti_to_float(input("Cik procentus atstāsim dzeramnaudai? "))
     tip = nauda * procenti
-    print(f"Jāatstāj {valutas_nosaukums} {tip:.2f}")
+    print(f"Jāatstāj  {tip:.2f} {valutas_nosaukums}")
 
 
 def nauda_to_float(d):
